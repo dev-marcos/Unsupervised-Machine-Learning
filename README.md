@@ -39,6 +39,8 @@ O processo de clustering é útil quando desejamos descobrir padrões ou grupos 
 ## Análise de componentes principais (PCA)
 A PCA é uma técnica de redução de dimensionalidade que busca encontrar os principais padrões de variação nos dados. Isso pode ser útil para visualizar e compreender dados de alta dimensionalidade.
 
+Análise de Componentes Principais (PCA) é um dos métodos estatísticos de múltiplas variáveis mais simples. A PCA é considerada a WUDQVIRUPDomR OLQHDU yWLPD, dentre as transformadas de imagens, sendo muito utilizada pela comunidade de reconhecimento de padrões.
+
 ## Análise de agrupamento hierárquico (HCA)
 A HCA é uma técnica de clustering que constrói uma hierarquia de grupos com base na dissimilaridade entre os pontos de dados. Isso permite uma compreensão mais profunda da estrutura dos dados.
 
@@ -47,3 +49,4 @@ Os SOMs são uma técnica de aprendizado não supervisionado que busca visualiza
 
 ## Modelos de mistura de distribuições (GMM)
 O GMM é uma técnica de clustering probabilístico que modela cada cluster como uma mistura de distribuições. Isso permite uma classificação mais suave e flexível dos dados.
+
