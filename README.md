@@ -46,6 +46,7 @@ $$ d_{pq} = [\sum_{j=1}^{k}(|ZX_{jp}-ZX_{jq}|)^m]^\frac{1}{m} $$
 
 
 
+
 Distancia euclidiana: 
 
 
