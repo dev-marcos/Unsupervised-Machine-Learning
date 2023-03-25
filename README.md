@@ -59,9 +59,39 @@ Distancia euclidiana quadrática:
 $$ d_{pq} = \sum_{j=1}^{k}(ZX_{jp}-ZX_{jq})^2 $$
 
 ## Análise de componentes principais (PCA)
-A PCA é uma técnica de redução de dimensionalidade que busca encontrar os principais padrões de variação nos dados. Isso pode ser útil para visualizar e compreender dados de alta dimensionalidade.
+Análise de componentes principais (PCA) é uma técnica de análise multivariada que é usada para reduzir a dimensionalidade de dados com muitas variáveis, ao mesmo tempo que mantém a maior quantidade possível de informações. Ela busca transformar as variáveis originais em um conjunto menor de variáveis lineares, denominadas componentes principais, que capturam a maior parte da variabilidade dos dados.
 
-Análise de Componentes Principais (PCA) é um dos métodos estatísticos de múltiplas variáveis mais simples. A PCA é considerada a WUDQVIRUPDomR OLQHDU yWLPD, dentre as transformadas de imagens, sendo muito utilizada pela comunidade de reconhecimento de padrões.
+Por exemplo, suponha que temos um conjunto de dados com 10 variáveis diferentes. Cada variável representa uma característica ou medida diferente de algum objeto. Quando olhamos para essas 10 variáveis juntas, pode ser difícil interpretar a relação entre elas ou identificar padrões nos dados. PCA nos permite simplificar a estrutura dos dados e explorar como as variáveis se relacionam umas com as outras de forma mais fácil.
+
+Em Python, podemos realizar a análise de componentes principais usando a biblioteca scikit-learn. A seguir, mostramos um exemplo simples de como aplicar PCA em um conjunto de dados de flores usando a biblioteca scikit-learn:
+
+```
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn.datasets import load_iris
+from sklearn.decomposition import PCA
+
+# Carregar o conjunto de dados de flores
+iris = load_iris()
+X = iris.data
+y = iris.target
+
+# Aplicar PCA com dois componentes principais
+pca = PCA(n_components=2)
+X_pca = pca.fit_transform(X)
+
+# Visualizar os dados em um gráfico de dispersão
+plt.scatter(X_pca[:, 0], X_pca[:, 1], c=y)
+plt.xlabel('Componente Principal 1')
+plt.ylabel('Componente Principal 2')
+plt.show()
+```
+Neste exemplo, carregamos o conjunto de dados de flores e aplicamos PCA com dois componentes principais usando a função PCA do scikit-learn. Em seguida, transformamos os dados originais em um novo conjunto de dados com apenas duas variáveis, que representam as duas primeiras componentes principais.
+
+Finalmente, visualizamos os dados transformados em um gráfico de dispersão, onde cada ponto representa uma flor e sua cor indica sua classe (setosa, versicolor ou virginica). Podemos ver que as diferentes classes de flores estão bem separadas, o que sugere que as duas primeiras componentes principais capturam a maior parte da variabilidade dos dados.
+
+Em resumo, a análise de componentes principais é uma técnica útil para reduzir a dimensionalidade de conjuntos de dados com muitas variáveis, permitindo a visualização e análise mais simples dos dados. O exemplo acima mostra como aplicar PCA em Python usando a biblioteca scikit-learn para explorar um conjunto de dados de flores.
+
 
 ## Análise de agrupamento hierárquico (HCA)
 A HCA é uma técnica de clustering que constrói uma hierarquia de grupos com base na dissimilaridade entre os pontos de dados. Isso permite uma compreensão mais profunda da estrutura dos dados.
